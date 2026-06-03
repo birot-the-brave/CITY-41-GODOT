@@ -1,3 +1,7 @@
 [gd_scene format=3 uid="uid://c1i1nie31gpf3"]
 
-[node name="SettingsMenu" type="Node2D" unique_id=725151018]
+[node name="SettingsMenu" type="Control" unique_id=1548948331]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

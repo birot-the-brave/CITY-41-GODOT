@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bimjppqif0wvi"]
+
+[ext_resource type="Script" uid="uid://ppw1t77rygpo" path="res://scripts/characters/Player_CHR.gd" id="1_hhusb"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1wc8l"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_1wc8l"]
+
+[node name="Player_CHR" type="CharacterBody3D" unique_id=374412116]
+script = ExtResource("1_hhusb")
+
+[node name="PlayerCollision" type="CollisionShape3D" parent="." unique_id=1903573342]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_1wc8l")
+
+[node name="Head" type="Node3D" parent="." unique_id=1988510478]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=1241934521]
+fov = 90.0
+
+[node name="PlayerModel" type="Node3D" parent="." unique_id=495204319]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerModel" unique_id=1805134891]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_1wc8l")
+
+[node name="HUD" type="Control" parent="." unique_id=659515969]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

@@ -1,3 +1,7 @@
 [gd_scene format=3 uid="uid://dsffa604ts3wm"]
 
-[node name="FileSelect" type="Node2D" unique_id=1821913136]
+[node name="FileSelect" type="Control" unique_id=627819467]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

@@ -1,3 +1,7 @@
 [gd_scene format=3 uid="uid://dv1v2o1ybwtm4"]
 
-[node name="PauseOverlay" type="Node2D" unique_id=765182921]
+[node name="PauseOverlay" type="Control" unique_id=228278789]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
