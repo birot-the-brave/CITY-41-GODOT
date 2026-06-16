@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://bsn4m3ah2s810"]
+
+[sub_resource type="SystemFont" id="SystemFont_nd4gr"]
+
+[resource]
+default_font = SubResource("SystemFont_nd4gr")
+default_font_size = 25

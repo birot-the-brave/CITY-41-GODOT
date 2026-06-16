@@ -1,7 +1,116 @@
 [gd_scene format=3 uid="uid://dsffa604ts3wm"]
 
+[ext_resource type="Theme" uid="uid://dl0efq2qth7cx" path="res://assets/themes/Menu_Title.tres" id="1_hrpkc"]
+[ext_resource type="Theme" uid="uid://bsn4m3ah2s810" path="res://assets/themes/Menu_Text.tres" id="2_ayvnj"]
+
 [node name="FileSelect" type="Control" unique_id=627819467]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1988215189]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 192
+theme_override_constants/margin_top = 108
+theme_override_constants/margin_right = 192
+theme_override_constants/margin_bottom = 108
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=350288164]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=626263338]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_hrpkc")
+theme_type_variation = &"HeaderLarge"
+text = "SAVE FILES"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=964541608]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="SaveSlots" type="ScrollContainer" parent="MarginContainer/VBoxContainer" unique_id=1565528608]
+layout_mode = 2
+size_flags_vertical = 3
+vertical_scroll_mode = 0
+
+[node name="SaveSlotMargin" type="MarginContainer" parent="MarginContainer/VBoxContainer/SaveSlots" unique_id=1403064346]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="SaveSlotContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/SaveSlots/SaveSlotMargin" unique_id=707462809]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="SaveSlot1" type="Panel" parent="MarginContainer/VBoxContainer/SaveSlots/SaveSlotMargin/SaveSlotContainer" unique_id=1812858185]
+custom_minimum_size = Vector2(275, 450)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+mouse_filter = 1
+
+[node name="SaveSlot2" type="Panel" parent="MarginContainer/VBoxContainer/SaveSlots/SaveSlotMargin/SaveSlotContainer" unique_id=77959065]
+custom_minimum_size = Vector2(275, 450)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+mouse_filter = 1
+
+[node name="SaveSlot3" type="Panel" parent="MarginContainer/VBoxContainer/SaveSlots/SaveSlotMargin/SaveSlotContainer" unique_id=1793445798]
+custom_minimum_size = Vector2(275, 450)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+mouse_filter = 1
+
+[node name="SaveSlot4" type="Panel" parent="MarginContainer/VBoxContainer/SaveSlots/SaveSlotMargin/SaveSlotContainer" unique_id=1223726286]
+custom_minimum_size = Vector2(275, 450)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+mouse_filter = 1
+
+[node name="SaveSlot5" type="Panel" parent="MarginContainer/VBoxContainer/SaveSlots/SaveSlotMargin/SaveSlotContainer" unique_id=735770455]
+custom_minimum_size = Vector2(275, 450)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+mouse_filter = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1549417513]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 50
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1053988680]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("2_ayvnj")
+text = "NEW FILE"
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1632000392]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme = ExtResource("2_ayvnj")
+text = "SELECT FILE"
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1113962920]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme = ExtResource("2_ayvnj")
+text = "DELETE FILE"
