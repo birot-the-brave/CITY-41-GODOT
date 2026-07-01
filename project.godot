@@ -16,8 +16,9 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 
 [autoload]
 
-YarnSpinner="*uid://bhiw7fae5n1e8"
 QuestSystem="*uid://b77kvbliweux5"
+PlayerData="*uid://dhe87xr34j8ld"
+LevelData="*uid://bn563lg0og8ui"
 
 [debug]
 
