@@ -1,8 +1,4 @@
-# https://youtu.be/wN2DPKzMikk?t=1412 timestamped to where i've made it to.
-# he is about to test the save function in his main menu which seems to have a tutorial
-# that is also on his page, so i will do that before continuing the save system !
-# this is looking pretty cool so far i just need to remember to make it so the game will
-# likely use a checkpoint system during the missions at the least.
+# https://youtu.be/wN2DPKzMikk?t=1672 new timestamp
 
 extends Node
 
@@ -36,13 +32,45 @@ func save_player_data_bin() -> void:
 		push_error("Could not save player data (binary): ", error_string(err))
 
 func load_player_data_json() -> void:
-	pass
+	var save_data: Dictionary = {}
+	var err: Error = FileHandler.open_json_file(save_path_json, save_data)
+	if err != OK:
+		push_error("Could not load player data (JSON): ", error_string(err))
+		return
+		
+	err = verify_save_data_json(save_data)
+	if err != OK:
+		push_error("Invalid save file structure")
+		return
+		
+	health = save_data[KEY_HEALTH]
+	missions = save_data[KEY_MISSIONS]
 
 func load_player_data_bin() -> void:
-	pass
+	var save_data: Dictionary = {}
+	var err: Error = FileHandler.open_bin_file(save_path_json, save_data)
+	if err != OK:
+		push_error("Could not load player data (binary): ", error_string(err))
+		return
+		
+	err = verify_save_data_bin(save_data)
+	if err != OK:
+		push_error("Invalid save file structure")
+		return
+		
+	health = save_data[KEY_HEALTH]
+	missions = save_data[KEY_MISSIONS]
 
 func verify_save_data_json(save_data: Dictionary) -> Error:
-	
+	if not save_data.has(KEY_HEALTH):
+		return ERR_DOES_NOT_EXIST
+	if not save_data.has(KEY_MISSIONS):
+		return ERR_DOES_NOT_EXIST
+	return OK
 
 func verify_save_data_bin(save_data: Dictionary) -> Error:
-	
+	if not save_data.has(KEY_HEALTH):
+		return ERR_DOES_NOT_EXIST
+	if not save_data.has(KEY_MISSIONS):
+		return ERR_DOES_NOT_EXIST
+	return OK

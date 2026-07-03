@@ -1,15 +1,12 @@
 extends Control
 
-func _ready() -> void:
-	pass
-
-func _process(delta: float) -> void:
-	pass
+signal file_select_pressed(origin: String)
+signal quit_pressed(origin: String)
 
 
 func _on_file_select_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/ui/FileSelect.tscn")
+	file_select_pressed.emit("main_menu")
 
 
 func _on_quit_pressed() -> void:
-	get_tree().quit()
+	quit_pressed.emit("main_menu")
