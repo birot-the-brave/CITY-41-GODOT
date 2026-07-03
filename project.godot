@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="CITY-41"
-run/main_scene="uid://gtlvw10lgvwv"
+run/main_scene="uid://gpir0ce0ube0"
 config/features=PackedStringArray("4.6", "Forward Plus")
+
+[autoload]
+
+QuestSystem="*uid://b77kvbliweux5"
+PlayerData="*uid://dhe87xr34j8ld"
+MissionData="*uid://bn563lg0og8ui"
 
 [debug]
 
@@ -28,7 +34,7 @@ window/size/viewport_height=1080
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg", "res://addons/quest_system/plugin.cfg")
 
 [input]
 
@@ -85,6 +91,10 @@ pointing/emulate_touch_from_mouse=true
 [physics]
 
 3d/physics_engine="Jolt Physics"
+
+[quest_system]
+
+config/active_quest_pool_path="uid://dwplqvhepjapv"
 
 [rendering]
 

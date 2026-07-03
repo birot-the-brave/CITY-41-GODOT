@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://gpir0ce0ube0"]
+
+[ext_resource type="Script" uid="uid://cwl01vxj3hjbw" path="res://scripts/global/SceneHandler.gd" id="1_s55r0"]
+[ext_resource type="PackedScene" uid="uid://bkbqb24kdbm34" path="res://scenes/ui/MainMenu.tscn" id="2_ruun6"]
+[ext_resource type="PackedScene" uid="uid://d2k1wyl2s202w" path="res://scenes/main/GameScene.tscn" id="3_lkar4"]
+[ext_resource type="PackedScene" uid="uid://dsffa604ts3wm" path="res://scenes/ui/FileSelect.tscn" id="3_ruun6"]
+[ext_resource type="PackedScene" uid="uid://b2ygesd7k72pb" path="res://scenes/ui/PauseMenu.tscn" id="5_lkar4"]
+
+[node name="SceneHandler" type="Node" unique_id=332132275]
+script = ExtResource("1_s55r0")
+main_menu_packed = ExtResource("2_ruun6")
+file_select_packed = ExtResource("3_ruun6")
+game_scene_packed = ExtResource("3_lkar4")
+pause_menu_packed = ExtResource("5_lkar4")

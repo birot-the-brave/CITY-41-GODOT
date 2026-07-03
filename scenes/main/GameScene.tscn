@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://d2k1wyl2s202w"]
+
+[ext_resource type="PackedScene" uid="uid://gtlvw10lgvwv" path="res://scenes/debug/DEBUG_LVL.tscn" id="1_e8dj1"]
+[ext_resource type="Script" uid="uid://dfhriocpkss4o" path="res://scripts/main/GameScene.gd" id="1_wtlub"]
+
+[node name="GameScene" type="Node3D" unique_id=499694828]
+script = ExtResource("1_wtlub")
+
+[node name="DEBUG_LVL" parent="." unique_id=1100499888 instance=ExtResource("1_e8dj1")]
