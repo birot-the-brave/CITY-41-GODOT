@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://3tee4v0ybcyo" path="res://scripts/ui/PauseMenu.gd" id="1_vb6pq"]
 
 [node name="PauseMenu" type="Control" unique_id=2091094999]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,3 +11,91 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vb6pq")
+
+[node name="MainPausePanel" type="Control" parent="." unique_id=218961367]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -150.0
+offset_right = 150.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainPausePanel" unique_id=1011232642]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.5
+offset_top = -52.0
+offset_right = 63.5
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Resume" type="Button" parent="MainPausePanel/VBoxContainer" unique_id=210351755]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 30
+text = "RESUME"
+
+[node name="Quit" type="Button" parent="MainPausePanel/VBoxContainer" unique_id=463200539]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "QUIT
+"
+
+[node name="QuitConfirmPanel" type="Control" parent="." unique_id=113398672]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -153.5
+offset_top = -61.0
+offset_right = 153.5
+offset_bottom = 61.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="QuitConfirmPanel" unique_id=616551663]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="QuitConfirmPanel/VBoxContainer" unique_id=1954386616]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 25
+text = "SAVE BEFORE EXITING?"
+
+[node name="QuitHbox" type="HBoxContainer" parent="QuitConfirmPanel/VBoxContainer" unique_id=1732685273]
+layout_mode = 2
+
+[node name="SaveAndExit" type="Button" parent="QuitConfirmPanel/VBoxContainer/QuitHbox" unique_id=1710954849]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 25
+text = "SAVE & EXIT"
+
+[node name="ExitWithoutSaving" type="Button" parent="QuitConfirmPanel/VBoxContainer/QuitHbox" unique_id=925626912]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 25
+text = "DON'T SAVE"
+
+[node name="Cancel" type="Button" parent="QuitConfirmPanel/VBoxContainer" unique_id=1954819097]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 25
+text = "CANCEL"

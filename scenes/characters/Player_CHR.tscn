@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bimjppqif0wvi"]
 
 [ext_resource type="Script" uid="uid://ppw1t77rygpo" path="res://scripts/characters/Player_CHR.gd" id="1_hhusb"]
-[ext_resource type="Theme" uid="uid://bsn4m3ah2s810" path="res://assets/themes/Menu_Text.tres" id="2_x8bas"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1wc8l"]
 
@@ -25,29 +24,3 @@ fov = 90.0
 [node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerModel" unique_id=1805134891]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_1wc8l")
-
-[node name="HUD" type="Control" parent="." unique_id=659515969]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="HUD" unique_id=779346321]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -476.5
-offset_top = -235.5
-offset_right = 476.5
-offset_bottom = 235.5
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("2_x8bas")
-text = "100"
-horizontal_alignment = 1
-vertical_alignment = 1

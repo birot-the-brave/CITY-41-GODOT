@@ -64,35 +64,35 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 20
 
-[node name="SaveSlot1" type="Panel" parent="MarginContainer/VBoxContainer/SaveSlots/SaveSlotMargin/SaveSlotContainer" unique_id=1812858185]
+[node name="SaveSlot1" type="Button" parent="MarginContainer/VBoxContainer/SaveSlots/SaveSlotMargin/SaveSlotContainer" unique_id=500051507]
 custom_minimum_size = Vector2(275, 450)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 mouse_filter = 1
 
-[node name="SaveSlot2" type="Panel" parent="MarginContainer/VBoxContainer/SaveSlots/SaveSlotMargin/SaveSlotContainer" unique_id=77959065]
+[node name="SaveSlot2" type="Button" parent="MarginContainer/VBoxContainer/SaveSlots/SaveSlotMargin/SaveSlotContainer" unique_id=1440979439]
 custom_minimum_size = Vector2(275, 450)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 mouse_filter = 1
 
-[node name="SaveSlot3" type="Panel" parent="MarginContainer/VBoxContainer/SaveSlots/SaveSlotMargin/SaveSlotContainer" unique_id=1793445798]
+[node name="SaveSlot3" type="Button" parent="MarginContainer/VBoxContainer/SaveSlots/SaveSlotMargin/SaveSlotContainer" unique_id=1930175448]
 custom_minimum_size = Vector2(275, 450)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 mouse_filter = 1
 
-[node name="SaveSlot4" type="Panel" parent="MarginContainer/VBoxContainer/SaveSlots/SaveSlotMargin/SaveSlotContainer" unique_id=1223726286]
+[node name="SaveSlot4" type="Button" parent="MarginContainer/VBoxContainer/SaveSlots/SaveSlotMargin/SaveSlotContainer" unique_id=360445705]
 custom_minimum_size = Vector2(275, 450)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 mouse_filter = 1
 
-[node name="SaveSlot5" type="Panel" parent="MarginContainer/VBoxContainer/SaveSlots/SaveSlotMargin/SaveSlotContainer" unique_id=735770455]
+[node name="SaveSlot5" type="Button" parent="MarginContainer/VBoxContainer/SaveSlots/SaveSlotMargin/SaveSlotContainer" unique_id=1322084089]
 custom_minimum_size = Vector2(275, 450)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -124,8 +124,3 @@ custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme = ExtResource("2_ayvnj")
 text = "DELETE FILE"
-
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/NewFile" to="." method="_on_new_file_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/LoadFile" to="." method="_on_load_file_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/DeleteFile" to="." method="_on_delete_file_pressed"]
