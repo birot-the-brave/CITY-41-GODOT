@@ -18,10 +18,10 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 
 [autoload]
 
-QuestSystem="*uid://b77kvbliweux5"
 MissionData="*uid://bn563lg0og8ui"
 PlayerData="*uid://dhe87xr34j8ld"
 GameEvents="*uid://dulvdct7l1a3c"
+WeaponDatabase="*uid://gxhs3044dev"
 
 [debug]
 
@@ -34,10 +34,11 @@ gdscript/warnings/unsafe_method_access=1
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/stretch/mode="viewport"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot_mcp/plugin.cfg", "res://addons/godot_super-wakatime/plugin.cfg", "res://addons/quest_system/plugin.cfg")
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg", "res://addons/quest_system/plugin.cfg")
 
 [input]
 
@@ -98,6 +99,9 @@ pointing/emulate_touch_from_mouse=true
 [quest_system]
 
 config/active_quest_pool_path="uid://dwplqvhepjapv"
+config/autoload_script_path=""
+config/available_quest_pool_path=""
+config/completed_quest_pool_path=""
 
 [rendering]
 

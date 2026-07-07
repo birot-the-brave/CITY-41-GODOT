@@ -2,6 +2,7 @@ extends Node
 
 const KEY_HEALTH: String = "health"
 const KEY_MISSIONS: String = "missions"
+const KEY_WEAPONS: String = "weapons"
 const KEY_POS_X: String = "pos_x"
 const KEY_POS_Y: String = "pos_y"
 const KEY_POS_Z: String = "pos_z"
@@ -13,6 +14,24 @@ var current_slot: int = 0
 var health: int = 100
 var missions: int = 0
 var position: Vector3 = Vector3.ZERO
+var weapons: Dictionary = {
+	"owned": [],
+	
+	"eqiupped": "",
+	
+	"state": {}
+}
+
+func unloack_weapon(id:String):
+	if weapons["owned"].has(id):
+		return
+	weapons["owned"].append(id)
+	
+	var db = WeaponDatabase.DATABASE[id]
+	weapons["state"][id] = {
+		"magazine": db.stats.mag_size,
+		"reserve": db.stats.reserves,
+	}
 
 func get_save_path(slot: int) -> String:
 	return SAVE_DIR + "slot_%d.json" % slot

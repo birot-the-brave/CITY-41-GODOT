@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bimjppqif0wvi"]
 
 [ext_resource type="Script" uid="uid://ppw1t77rygpo" path="res://scripts/characters/Player_CHR.gd" id="1_hhusb"]
+[ext_resource type="Script" uid="uid://ds5s5ivs2ighh" path="res://scripts/characters/WeaponHolder.gd" id="2_x8bas"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1wc8l"]
 
@@ -18,6 +19,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=1241934521]
 fov = 90.0
+
+[node name="WeaponHolder" type="Node3D" parent="Head/Camera3D" unique_id=120730938]
+script = ExtResource("2_x8bas")
 
 [node name="PlayerModel" type="Node3D" parent="." unique_id=495204319]
 
