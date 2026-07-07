@@ -1,15 +1,15 @@
 extends Node
 
-const DATABASE: Dictionary = {
+var DATABASE: Dictionary = {
 	"handgun": {
-		"name": "",
-		"scene": "",# preload("")
-		"icon": "", # preload("")
+		"name": "Handgun",
+		"scene": load("res://weapons/handgun/Handgun.tscn"),
+		"icon": preload("res://weapons/handgun/HandgunIcon.png"),
 		"stats": {
-			"body_dmg": "",
-			"head_dmg": "",
-			"mag_size": "",
-			"reserves": ""
+			"body_dmg": 15,
+			"head_dmg": 40,
+			"mag_size": 12,
+			"reserves": 60
 		}
 	},
 	"submachine": {

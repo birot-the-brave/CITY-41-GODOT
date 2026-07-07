@@ -1,14 +1,23 @@
 [gd_scene format=3 uid="uid://bimjppqif0wvi"]
 
 [ext_resource type="Script" uid="uid://ppw1t77rygpo" path="res://scripts/characters/Player_CHR.gd" id="1_hhusb"]
-[ext_resource type="Script" uid="uid://ds5s5ivs2ighh" path="res://scripts/characters/WeaponHolder.gd" id="2_x8bas"]
+[ext_resource type="Script" uid="uid://ds5s5ivs2ighh" path="res://scripts/weapons/WeaponManager.gd" id="2_x8bas"]
+[ext_resource type="PackedScene" uid="uid://bq0bxbyyu6cwe" path="res://scenes/ui/WeaponWheel.tscn" id="3_xsoho"]
+[ext_resource type="Script" uid="uid://dmit76v3chqq8" path="res://scripts/ui/HUD.gd" id="4_0spdo"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1wc8l"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_1wc8l"]
 
-[node name="Player_CHR" type="CharacterBody3D" unique_id=374412116]
+[node name="Player_CHR" type="CharacterBody3D" unique_id=374412116 node_paths=PackedStringArray("weapon_wheel", "weapon_manager")]
 script = ExtResource("1_hhusb")
+weapon_wheel = NodePath("WeaponWheel")
+weapon_manager = NodePath("WeaponManager")
+
+[node name="WeaponManager" type="Node3D" parent="." unique_id=704154154 node_paths=PackedStringArray("weapon_holder")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+script = ExtResource("2_x8bas")
+weapon_holder = NodePath("../Head/Camera3D/WeaponHolder")
 
 [node name="PlayerCollision" type="CollisionShape3D" parent="." unique_id=1903573342]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -21,10 +30,47 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 fov = 90.0
 
 [node name="WeaponHolder" type="Node3D" parent="Head/Camera3D" unique_id=120730938]
-script = ExtResource("2_x8bas")
 
 [node name="PlayerModel" type="Node3D" parent="." unique_id=495204319]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerModel" unique_id=1805134891]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_1wc8l")
+
+[node name="WeaponWheel" parent="." unique_id=244135502 instance=ExtResource("3_xsoho")]
+
+[node name="HUD" type="Control" parent="." unique_id=740812612]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+script = ExtResource("4_0spdo")
+
+[node name="HealthLabel" type="Label" parent="HUD" unique_id=250108912]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 35
+
+[node name="AmmoLabel" type="Label" parent="HUD" unique_id=1480881523]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -39.0
+offset_top = -69.0
+offset_right = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 35

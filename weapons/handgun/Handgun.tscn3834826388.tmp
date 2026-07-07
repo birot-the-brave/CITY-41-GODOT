@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://67b7hpiqo046"]
+
+[ext_resource type="Script" uid="uid://b5ah1npql0f5s" path="res://weapons/handgun/Handgun.gd" id="1_fdqpl"]
+
+[node name="Handgun" type="Node3D" unique_id=906149483]
+script = ExtResource("1_fdqpl")

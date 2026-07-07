@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b2ygesd7k72pb"]
 
 [ext_resource type="Script" uid="uid://3tee4v0ybcyo" path="res://scripts/ui/PauseMenu.gd" id="1_vb6pq"]
+[ext_resource type="Script" uid="uid://cnhjap41k0bxj" path="res://scripts/ui/WeaponLoadout.gd" id="2_7ida2"]
 
 [node name="PauseMenu" type="Control" unique_id=2091094999]
 process_mode = 3
@@ -47,8 +48,16 @@ size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 30
 text = "RESUME"
 
-[node name="Quit" type="Button" parent="MainPausePanel/VBoxContainer" unique_id=463200539]
+[node name="Weapons" type="Button" parent="MainPausePanel/VBoxContainer" unique_id=1920451272]
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 30
+text = "WEAPONS
+"
+
+[node name="Quit" type="Button" parent="MainPausePanel/VBoxContainer" unique_id=630640716]
+layout_mode = 2
+size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 30
 text = "QUIT
 "
@@ -99,3 +108,16 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 25
 text = "CANCEL"
+
+[node name="WeaponsPanel" type="Control" parent="." unique_id=2016704318]
+anchors_preset = 0
+offset_left = 919.5
+offset_top = 569.0
+offset_right = 959.5
+offset_bottom = 609.0
+script = ExtResource("2_7ida2")
+
+[node name="SlotContainer" type="HBoxContainer" parent="WeaponsPanel" unique_id=1306039476]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

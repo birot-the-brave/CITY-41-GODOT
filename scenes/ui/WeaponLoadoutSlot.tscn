@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://glmlrexnqj8x"]
+
+[ext_resource type="Script" uid="uid://cfg62ojlgxvlk" path="res://WeaponLoadoutSlot.gd" id="1_ljpgn"]
+
+[node name="WeaponLoadoutSlot" type="TextureRect" unique_id=436658936]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ljpgn")
