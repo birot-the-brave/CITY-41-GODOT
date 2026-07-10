@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://gtlvw10lgvwv"]
 
-[ext_resource type="PackedScene" uid="uid://bimjppqif0wvi" path="res://scenes/characters/Player_CHR.tscn" id="1_1lenn"]
+[ext_resource type="PackedScene" uid="uid://bimjppqif0wvi" path="res://scenes/characters/Player.tscn" id="1_1lenn"]
+[ext_resource type="PackedScene" uid="uid://dd86ar6kit4j8" path="res://scenes/characters/TargetDummy.tscn" id="2_7hj2w"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4u1dd"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -38,3 +39,12 @@ size = Vector3(50, 1, 25)
 [node name="PROPS" type="Node3D" parent="." unique_id=1643616518]
 
 [node name="INTERACTABLES" type="Node3D" parent="." unique_id=446712199]
+
+[node name="TargetDummy" parent="." unique_id=706451930 instance=ExtResource("2_7hj2w")]
+transform = Transform3D(0.8079179, 0, 0.589295, 0, 1, 0, -0.589295, 0, 0.8079179, 12.591981, -0.001953125, -3.8341122)
+
+[node name="TargetDummy2" parent="." unique_id=1528092968 instance=ExtResource("2_7hj2w")]
+transform = Transform3D(0.9993706, 0, 0.035475075, 0, 1, 0, -0.035475075, 0, 0.9993706, 7.8615847, 0.9368887, 2.3261867)
+
+[node name="TargetDummy3" parent="." unique_id=1001336331 instance=ExtResource("2_7hj2w")]
+transform = Transform3D(0.8983115, 0, 0.4393592, 0, 1, 0, -0.4393592, 0, 0.8983115, 21.244682, 0.9368887, 17.15743)

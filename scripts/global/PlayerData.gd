@@ -9,6 +9,7 @@ const KEY_POS_X: String = "pos_x"
 const KEY_POS_Y: String = "pos_y"
 const KEY_POS_Z: String = "pos_z"
 const SAVE_DIR: String = "user://save_files/"
+const KEY_MISSIONS_DATA: String = "missions_data"
 
 var current_slot: int = 0
 
@@ -26,6 +27,10 @@ var weapons: Dictionary = {
 	"equipped": "",
 	"wheel_order": [],
 	"state": {}
+}
+var missions_data: Dictionary = {
+	"active": {},
+	"completed": []
 }
 
 func unlock_weapon(id: String) -> void:
@@ -62,6 +67,7 @@ func save_player_data(slot: int) -> void:
 		KEY_POS_Y: position.y,
 		KEY_POS_Z: position.z,
 		KEY_WEAPONS: weapons,
+		KEY_MISSIONS_DATA: missions_data,
 	}
 	var err: Error = FileHandler.store_json_file(save_data, get_save_path(slot), true)
 	if err != OK:
@@ -81,6 +87,7 @@ func load_player_data(slot: int) -> void:
 	missions = save_data[KEY_MISSIONS]
 	position = Vector3(save_data[KEY_POS_X], save_data[KEY_POS_Y], save_data[KEY_POS_Z])
 	weapons = save_data.get(KEY_WEAPONS, {"owned": [], "equipped": "", "wheel_order": [], "state": {}})
+	missions_data = save_data.get(KEY_MISSIONS_DATA, {"active": {}, "completed": []})
 	current_slot = slot
 
 func verify_save_data(save_data: Dictionary) -> Error:

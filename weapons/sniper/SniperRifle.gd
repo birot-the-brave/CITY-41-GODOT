@@ -1,11 +1,6 @@
-extends "res://scripts/weapons/Weapon.gd"
+extends "res://scripts/weapons/GunBase.gd"
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	fire_rate = 2.0
+	reload_time = 3.5
+	automatic = false

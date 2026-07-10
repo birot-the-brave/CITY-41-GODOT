@@ -1,15 +1,18 @@
 [gd_scene format=3 uid="uid://bimjppqif0wvi"]
 
-[ext_resource type="Script" uid="uid://ppw1t77rygpo" path="res://scripts/characters/Player_CHR.gd" id="1_hhusb"]
+[ext_resource type="Script" uid="uid://ppw1t77rygpo" path="res://scripts/characters/PlayerController.gd" id="1_hhusb"]
 [ext_resource type="Script" uid="uid://ds5s5ivs2ighh" path="res://scripts/weapons/WeaponManager.gd" id="2_x8bas"]
 [ext_resource type="PackedScene" uid="uid://bq0bxbyyu6cwe" path="res://scenes/ui/WeaponWheel.tscn" id="3_xsoho"]
 [ext_resource type="Script" uid="uid://dmit76v3chqq8" path="res://scripts/ui/HUD.gd" id="4_0spdo"]
+[ext_resource type="Script" uid="uid://dkg466beag701" path="res://scripts/ui/MissionNotification.gd" id="5_bnjeo"]
+[ext_resource type="Script" uid="uid://cvdi38lhu2h3q" path="res://scripts/ui/MissionTracker.gd" id="6_bkadd"]
+[ext_resource type="Script" uid="uid://bffegl0dbuigk" path="res://scripts/ui/Crosshair.gd" id="7_miirx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1wc8l"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_1wc8l"]
 
-[node name="Player_CHR" type="CharacterBody3D" unique_id=374412116 node_paths=PackedStringArray("weapon_wheel", "weapon_manager")]
+[node name="Player" type="CharacterBody3D" unique_id=374412116 node_paths=PackedStringArray("weapon_wheel", "weapon_manager")]
 script = ExtResource("1_hhusb")
 weapon_wheel = NodePath("WeaponWheel")
 weapon_manager = NodePath("WeaponManager")
@@ -74,3 +77,45 @@ offset_right = 1.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_font_sizes/font_size = 35
+
+[node name="MissionNotification" type="Control" parent="." unique_id=768630135]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -195.5
+offset_right = 195.5
+offset_bottom = 161.0
+grow_horizontal = 2
+mouse_filter = 2
+script = ExtResource("5_bnjeo")
+
+[node name="Label" type="Label" parent="MissionNotification" unique_id=1450402836]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 69.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 50
+
+[node name="MissionTracker" type="Control" parent="." unique_id=53926980]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 213.0
+offset_bottom = 226.0
+mouse_filter = 2
+script = ExtResource("6_bkadd")
+
+[node name="Label" type="Label" parent="MissionTracker" unique_id=1400925881]
+layout_mode = 0
+offset_right = 299.0
+offset_bottom = 173.0
+theme_override_font_sizes/font_size = 25
+
+[node name="Crosshair" type="Control" parent="." unique_id=346434458]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("7_miirx")

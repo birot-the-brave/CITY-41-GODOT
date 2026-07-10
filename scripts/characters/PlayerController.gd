@@ -29,7 +29,6 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Pause") and not get_tree().paused:
 		GameEvents.pause_requested.emit()
 		get_viewport().set_input_as_handled()
-		PlayerData.unlock_weapon("assualt_rifle")
 	
 	if event.is_action_pressed("WeaponWheel"):
 		_open_weapon_wheel()
@@ -56,29 +55,46 @@ func _close_weapon_wheel() -> void:
 	if id != "":
 		weapon_manager.equip_weapon(id)
 
+func _debug_unlock_all_weapons() -> void:
+	for id in WeaponDatabase.DATABASE.keys():
+		PlayerData.unlock_weapon(id)
+	print("Debug: unlocked all weapons.")
+
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
+	
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		PlayerData.health = clamp(PlayerData.health - 5, 0, 100)
-		PlayerData.unlock_weapon("handgun")
-
+		if MissionManager.is_mission_active(00):
+			MissionManager.complete_objective(00, "jump")
+	
 	if !Input.is_action_pressed("Sprint"):
 		speed = WALK_SPEED
 	if Input.is_action_pressed("Sprint"):
 		speed = SPRINT_SPEED
-
+		if is_on_floor() and MissionManager.is_mission_active(00):
+			MissionManager.complete_objective(00, "sprint")
+	if Input.is_action_pressed("Crouch"):
+		pass
+		if MissionManager.is_mission_active(00):
+			MissionManager.complete_objective(00, "crouch")
+	
+	if OS.is_debug_build() and Input.is_action_just_pressed("DebugUnlockAll"):
+		_debug_unlock_all_weapons()
+	
 	var input_dir := Input.get_vector("Left", "Right", "Forward", "Backward")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-
+	
 	if direction:
 		velocity.x = direction.x * speed
 		velocity.z = direction.z * speed
+		if MissionManager.is_mission_active(00):
+			MissionManager.complete_objective(00, "move")
 	elif is_on_floor():
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.z = move_toward(velocity.z, 0, speed)
-
+	
 	move_and_slide()
 	PlayerData.position = position

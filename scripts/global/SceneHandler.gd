@@ -67,9 +67,11 @@ func _exit_to_main_menu() -> void:
 func new_save(slot: int) -> void:
 	PlayerData.health = 100
 	PlayerData.missions = 0
-	PlayerData.position = Vector3.ZERO  # change to player spawn eventually
+	PlayerData.position = Vector3.ZERO
 	PlayerData.current_slot = slot
-	PlayerData.save_player_data(slot)
+	#PlayerData.save_player_data(slot)
+	MissionManager.start_mission(00)
+
 	_start_game()
 
 func load_save(slot: int) -> void:
