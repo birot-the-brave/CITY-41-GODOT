@@ -14,8 +14,8 @@ var DATABASE: Dictionary = {
 	},
 	"submachine": {
 		"name": "",
-		"scene": "",# preload("")
-		"icon": "", # preload("")
+		"scene": load("res://weapons/handgun/Handgun.tscn"),
+		"icon": preload("res://weapons/handgun/HandgunIcon.png"),
 		"stats": {
 			"body_dmg": "",
 			"head_dmg": "",
@@ -25,8 +25,8 @@ var DATABASE: Dictionary = {
 	},
 	"shotgun": {
 		"name": "",
-		"scene": "",# preload("")
-		"icon": "", # preload("")
+		"scene": load("res://weapons/handgun/Handgun.tscn"),
+		"icon": preload("res://weapons/handgun/HandgunIcon.png"),
 		"stats": {
 			"body_dmg": "",
 			"head_dmg": "",
@@ -36,8 +36,8 @@ var DATABASE: Dictionary = {
 	},
 	"sniper": {
 		"name": "",
-		"scene": "",# preload("")
-		"icon": "", # preload("")
+		"scene": load("res://weapons/handgun/Handgun.tscn"),
+		"icon": preload("res://weapons/handgun/HandgunIcon.png"),
 		"stats": {
 			"body_dmg": "",
 			"head_dmg": "",
@@ -47,8 +47,8 @@ var DATABASE: Dictionary = {
 	},
 	"marksman_rifle": {
 		"name": "",
-		"scene": "",# preload("")
-		"icon": "", # preload("")
+		"scene": load("res://weapons/handgun/Handgun.tscn"),
+		"icon": preload("res://weapons/handgun/HandgunIcon.png"),
 		"stats": {
 			"body_dmg": "",
 			"head_dmg": "",
@@ -58,8 +58,8 @@ var DATABASE: Dictionary = {
 	},
 	"assualt_rifle": {
 		"name": "",
-		"scene": "",# preload("")
-		"icon": "", # preload("")
+		"scene": load("res://weapons/handgun/Handgun.tscn"),
+		"icon": preload("res://weapons/handgun/HandgunIcon.png"),
 		"stats": {
 			"body_dmg": "",
 			"head_dmg": "",
@@ -69,8 +69,8 @@ var DATABASE: Dictionary = {
 	},
 	"harpoon": {
 		"name": "",
-		"scene": "",# preload("")
-		"icon": "", # preload("")
+		"scene": load("res://weapons/handgun/Handgun.tscn"),
+		"icon": preload("res://weapons/handgun/HandgunIcon.png"),
 		"stats": {
 			"body_dmg": "",
 			"head_dmg": "",
@@ -80,8 +80,8 @@ var DATABASE: Dictionary = {
 	},
 	"spear": {
 		"name": "",
-		"scene": "",# preload("")
-		"icon": "", # preload("")
+		"scene": load("res://weapons/handgun/Handgun.tscn"),
+		"icon": preload("res://weapons/handgun/HandgunIcon.png"),
 		"stats": {
 			"body_dmg": "",
 			"head_dmg": "",
@@ -91,8 +91,8 @@ var DATABASE: Dictionary = {
 	},
 	"crossbow": {
 		"name": "",
-		"scene": "",# preload("")
-		"icon": "", # preload("")
+		"scene": load("res://weapons/handgun/Handgun.tscn"),
+		"icon": preload("res://weapons/handgun/HandgunIcon.png"),
 		"stats": {
 			"body_dmg": "",
 			"head_dmg": "",
@@ -102,8 +102,8 @@ var DATABASE: Dictionary = {
 	},
 	"compound": {
 		"name": "",
-		"scene": "",# preload("")
-		"icon": "", # preload("")
+		"scene": load("res://weapons/handgun/Handgun.tscn"),
+		"icon": preload("res://weapons/handgun/HandgunIcon.png"),
 		"stats": {
 			"body_dmg": "",
 			"head_dmg": "",
@@ -113,8 +113,8 @@ var DATABASE: Dictionary = {
 	},
 	"lightmachine": {
 		"name": "",
-		"scene": "",# preload("")
-		"icon": "", # preload("")
+		"scene": load("res://weapons/handgun/Handgun.tscn"),
+		"icon": preload("res://weapons/handgun/HandgunIcon.png"),
 		"stats": {
 			"body_dmg": "",
 			"head_dmg": "",
@@ -124,8 +124,8 @@ var DATABASE: Dictionary = {
 	},
 	"grenade_launcher": {
 		"name": "",
-		"scene": "",# preload("")
-		"icon": "", # preload("")
+		"scene": load("res://weapons/handgun/Handgun.tscn"),
+		"icon": preload("res://weapons/handgun/HandgunIcon.png"),
 		"stats": {
 			"body_dmg": "",
 			"head_dmg": "",
