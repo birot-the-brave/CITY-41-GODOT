@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b12h8yoqyq6ga"]
+
+[ext_resource type="Script" uid="uid://d6g1rge2btpa" path="res://weapons/compound/CompoundBow.gd" id="1_qa666"]
+
+[node name="CompoundBow" type="Node3D" unique_id=1642979451]
+script = ExtResource("1_qa666")

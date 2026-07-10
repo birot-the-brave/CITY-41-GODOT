@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ds3dti2c70l1h"]
+
+[ext_resource type="Script" uid="uid://dq1n7s3ikngvd" path="res://weapons/harpoon/HarpoonGun.gd" id="1_8uefu"]
+
+[node name="HarpoonGun" type="Node3D" unique_id=1642979451]
+script = ExtResource("1_8uefu")

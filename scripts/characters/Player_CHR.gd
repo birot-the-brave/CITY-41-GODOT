@@ -29,6 +29,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Pause") and not get_tree().paused:
 		GameEvents.pause_requested.emit()
 		get_viewport().set_input_as_handled()
+		PlayerData.unlock_weapon("assualt_rifle")
 	
 	if event.is_action_pressed("WeaponWheel"):
 		_open_weapon_wheel()

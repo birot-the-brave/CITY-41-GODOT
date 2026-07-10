@@ -1,7 +1,7 @@
 extends "res://scripts/weapons/Weapon.gd"
 
-@export var fire_rate: float = 0.35
-@export var reload_time: float = 1.2
+@export var fire_rate: float = 0.175
+@export var reload_time: float = 2.6
 
 var can_fire: bool = true
 var is_reloading: bool = false

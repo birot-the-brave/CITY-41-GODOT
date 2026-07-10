@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cnjo8vh0q56ov"]
+
+[ext_resource type="Script" uid="uid://cwxc74g50cegc" path="res://weapons/lightmachine/LightMachineGun.gd" id="1_jyfgb"]
+
+[node name="LightMachineGun" type="Node3D" unique_id=1642979451]
+script = ExtResource("1_jyfgb")

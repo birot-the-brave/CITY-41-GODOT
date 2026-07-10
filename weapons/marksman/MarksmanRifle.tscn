@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bx63a04682q3x"]
+
+[ext_resource type="Script" uid="uid://d30u1m1tk7e5j" path="res://weapons/marksman/MarksmanRifle.gd" id="1_ursvf"]
+
+[node name="MarksmanRifle" type="Node3D" unique_id=1642979451]
+script = ExtResource("1_ursvf")

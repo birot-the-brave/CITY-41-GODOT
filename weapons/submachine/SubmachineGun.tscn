@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://boq66xavyxyq"]
+
+[ext_resource type="Script" uid="uid://b5o6ruvgtwilo" path="res://weapons/submachine/SubmachineGun.gd" id="1_b3f67"]
+
+[node name="SubmachineGun" type="Node3D" unique_id=1642979451]
+script = ExtResource("1_b3f67")

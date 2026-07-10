@@ -31,7 +31,7 @@ func _build_slots() -> void:
 	var count: int = order.size()
 	if count == 0:
 		return
-
+	
 	var radius: float = 150.0
 	var center: Vector2 = size / 2.0
 

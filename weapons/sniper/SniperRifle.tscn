@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bndywb0mkrl1n"]
+
+[ext_resource type="Script" uid="uid://becrirp7jfngg" path="res://weapons/sniper/SniperRifle.gd" id="1_fye6o"]
+
+[node name="SniperRifle" type="Node3D" unique_id=1642979451]
+script = ExtResource("1_fye6o")

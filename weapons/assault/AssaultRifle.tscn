@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bo1ooyofctwdx"]
+
+[ext_resource type="Script" uid="uid://bkahnytl36wbk" path="res://weapons/assault/AssaultRifle.gd" id="1_40sjf"]
+
+[node name="AssualtRifle" type="Node3D" unique_id=1507106072]
+script = ExtResource("1_40sjf")

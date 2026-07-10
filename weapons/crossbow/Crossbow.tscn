@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cpa0nf728jd0a"]
+
+[ext_resource type="Script" uid="uid://c7noa76xm84mt" path="res://weapons/crossbow/Crossbow.gd" id="1_awfxi"]
+
+[node name="Crossbow" type="Node3D" unique_id=1642979451]
+script = ExtResource("1_awfxi")

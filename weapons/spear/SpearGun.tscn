@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cbq627s4mtm8l"]
+
+[ext_resource type="Script" uid="uid://b7lenml6sc1xy" path="res://weapons/spear/SpearGun.gd" id="1_xm8q1"]
+
+[node name="SpearGun" type="Node3D" unique_id=1642979451]
+script = ExtResource("1_xm8q1")
