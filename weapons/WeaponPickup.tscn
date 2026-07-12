@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://corl03vlj20vk"]
+
+[ext_resource type="Script" uid="uid://edgbt1oueg3y" path="res://weapons/WeaponPickup.gd" id="1_2i5qp"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_adelk"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_2i5qp"]
+height = 1.5
+radius = 1.0
+
+[node name="WeaponPickup" type="Area3D" unique_id=595250204]
+script = ExtResource("1_2i5qp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=523895046]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+mesh = SubResource("SphereMesh_adelk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=940853835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+shape = SubResource("CylinderShape3D_2i5qp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

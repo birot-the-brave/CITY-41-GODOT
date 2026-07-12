@@ -4,3 +4,4 @@
 
 [node name="SpearGun" type="Node3D" unique_id=1642979451]
 script = ExtResource("1_xm8q1")
+weapon_id = "08"

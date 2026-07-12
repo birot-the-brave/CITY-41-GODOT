@@ -4,3 +4,4 @@
 
 [node name="HarpoonGun" type="Node3D" unique_id=1642979451]
 script = ExtResource("1_8uefu")
+weapon_id = "07"

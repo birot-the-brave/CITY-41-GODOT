@@ -6,6 +6,7 @@
 
 [node name="Handgun" type="Node3D" unique_id=906149483]
 script = ExtResource("1_fdqpl")
+weapon_id = "01"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=337127820]
 transform = Transform3D(0.3717072, 0, 0, 0, -0.04400432, 0, 0, 0, 0.45568034, -0.024166584, 0, 1.626414)

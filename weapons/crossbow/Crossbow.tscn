@@ -4,3 +4,4 @@
 
 [node name="Crossbow" type="Node3D" unique_id=1642979451]
 script = ExtResource("1_awfxi")
+weapon_id = "09"

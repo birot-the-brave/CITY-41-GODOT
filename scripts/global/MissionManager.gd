@@ -61,6 +61,8 @@ func _check_complete(id: int) -> void:
 	PlayerData.missions_data["completed"].append(id)
 	PlayerData.missions += 1
 	mission_completed.emit(id)
+	if MissionManager.is_mission_completed(00):
+		MissionManager.start_mission(01)
 
 	if MissionDatabase.MISSIONS[id].get("autosave_on_complete", false):
 		_autosave()

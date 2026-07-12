@@ -4,3 +4,4 @@
 
 [node name="LightMachineGun" type="Node3D" unique_id=1642979451]
 script = ExtResource("1_jyfgb")
+weapon_id = "11"

@@ -12,7 +12,7 @@
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_1wc8l"]
 
-[node name="Player" type="CharacterBody3D" unique_id=374412116 node_paths=PackedStringArray("weapon_wheel", "weapon_manager")]
+[node name="Player" type="CharacterBody3D" unique_id=374412116 node_paths=PackedStringArray("weapon_wheel", "weapon_manager") groups=["Player"]]
 script = ExtResource("1_hhusb")
 weapon_wheel = NodePath("WeaponWheel")
 weapon_manager = NodePath("WeaponManager")

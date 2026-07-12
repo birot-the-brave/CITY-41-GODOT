@@ -13,7 +13,7 @@ func _ready() -> void:
 func _on_objective_completed(id: int, objective: String) -> void:
 	var mission_name: String = MissionDatabase.MISSIONS[id]["name"]
 	var label_text: String = MissionManager.get_objective_label(id, objective)
-	_queue_message("%s\n%s complete" % [mission_name, label_text])
+	print("%s\n%s complete" % [mission_name, label_text])
 
 func _on_mission_completed(id: int) -> void:
 	var mission_name: String = MissionDatabase.MISSIONS[id]["name"]

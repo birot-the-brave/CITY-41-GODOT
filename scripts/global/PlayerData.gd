@@ -14,6 +14,7 @@ const KEY_MISSIONS_DATA: String = "missions_data"
 var current_slot: int = 0
 
 # player variables
+var has_saved_position: bool = false
 var health: int = 100:
 	set(value):
 		health = clamp(value, 0, 100)
@@ -89,6 +90,7 @@ func load_player_data(slot: int) -> void:
 	weapons = save_data.get(KEY_WEAPONS, {"owned": [], "equipped": "", "wheel_order": [], "state": {}})
 	missions_data = save_data.get(KEY_MISSIONS_DATA, {"active": {}, "completed": []})
 	current_slot = slot
+	has_saved_position = true
 
 func verify_save_data(save_data: Dictionary) -> Error:
 	if not save_data.has(KEY_HEALTH):

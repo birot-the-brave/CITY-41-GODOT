@@ -4,3 +4,4 @@
 
 [node name="AssualtRifle" type="Node3D" unique_id=1507106072]
 script = ExtResource("1_40sjf")
+weapon_id = "06"

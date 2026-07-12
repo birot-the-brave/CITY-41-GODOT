@@ -4,3 +4,4 @@
 
 [node name="CompoundBow" type="Node3D" unique_id=1642979451]
 script = ExtResource("1_qa666")
+weapon_id = "10"

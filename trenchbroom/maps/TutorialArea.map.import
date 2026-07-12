@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://dn215ru0a8nuw"
+path="res://.godot/imported/TutorialArea.map-599e006890f112e67b3405060cd7a5af.tres"
+
+[deps]
+
+source_file="res://trenchbroom/maps/TutorialArea.map"
+dest_files=["res://.godot/imported/TutorialArea.map-599e006890f112e67b3405060cd7a5af.tres"]
+
+[params]
+

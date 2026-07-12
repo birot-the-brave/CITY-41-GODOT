@@ -4,3 +4,4 @@
 
 [node name="GrenadeLauncher" type="Node3D" unique_id=1642979451]
 script = ExtResource("1_jyolm")
+weapon_id = "12"

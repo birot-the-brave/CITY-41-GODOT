@@ -13,7 +13,20 @@ var DATABASE: Dictionary = {
 			"reserves": 60
 		}
 	},
-
+	"power_punch": {
+		"name": "Power Punch",
+		"scene": load("res://weapons/powerpunch/PowerPunch.tscn"),
+		"icon": null,
+		"stats": {
+			"body_dmg": 45,
+			"head_dmg": 90,
+			"damage_variance": 5,
+			"mag_size": 1,
+			"reserves": 0,
+			"fire_rate": 5.0,
+			"automatic": false
+		}
+	},
 	"submachine": {
 		"name": "SMG",
 		"scene": load("res://weapons/submachine/SubmachineGun.tscn"),
@@ -26,7 +39,6 @@ var DATABASE: Dictionary = {
 			"reserves": 150
 		}
 	},
-
 	"shotgun": {
 		"name": "Shotgun",
 		"scene": load("res://weapons/shotgun/Shotgun.tscn"),
@@ -41,7 +53,6 @@ var DATABASE: Dictionary = {
 			"spread_deg": 4.0
 		}
 	},
-
 	"sniper": {
 		"name": "Sniper Rifle",
 		"scene": load("res://weapons/sniper/SniperRifle.tscn"),
@@ -54,7 +65,6 @@ var DATABASE: Dictionary = {
 			"reserves": 20
 		}
 	},
-
 	"marksman_rifle": {
 		"name": "Marksman Rifle",
 		"scene": load("res://weapons/marksman/MarksmanRifle.tscn"),
@@ -67,7 +77,6 @@ var DATABASE: Dictionary = {
 			"reserves": 40
 		}
 	},
-
 	"assault_rifle": {
 		"name": "Assault Rifle",
 		"scene": load("res://weapons/assault/AssaultRifle.tscn"),
@@ -80,7 +89,6 @@ var DATABASE: Dictionary = {
 			"reserves": 90
 		}
 	},
-
 	"harpoon": {
 		"name": "Harpoon Gun",
 		"scene": load("res://weapons/harpoon/HarpoonGun.tscn"),
@@ -94,7 +102,6 @@ var DATABASE: Dictionary = {
 			"projectile_speed": 40.0
 		}
 	},
-
 	"spear": {
 		"name": "Spear Gun",
 		"scene": load("res://weapons/spear/SpearGun.tscn"),
@@ -108,7 +115,6 @@ var DATABASE: Dictionary = {
 			"projectile_speed": 35.0
 		}
 	},
-
 	"crossbow": {
 		"name": "Crossbow",
 		"scene": load("res://weapons/crossbow/Crossbow.tscn"),
@@ -122,7 +128,6 @@ var DATABASE: Dictionary = {
 			"projectile_speed": 60.0
 		}
 	},
-
 	"compound": {
 		"name": "Compound Bow",
 		"scene": load("res://weapons/compound/CompoundBow.tscn"),
@@ -136,7 +141,6 @@ var DATABASE: Dictionary = {
 			"projectile_speed": 55.0
 		}
 	},
-
 	"lightmachine": {
 		"name": "LMG",
 		"scene": load("res://weapons/lightmachine/LightMachineGun.tscn"),
@@ -149,7 +153,6 @@ var DATABASE: Dictionary = {
 			"reserves": 150
 		}
 	},
-
 	"grenade_launcher": {
 		"name": "Grenade Launcher",
 		"scene": load("res://weapons/grenadelauncher/GrenadeLauncher.tscn"),

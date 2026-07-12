@@ -4,3 +4,4 @@
 
 [node name="Shotgun" type="Node3D" unique_id=1642979451]
 script = ExtResource("1_yo8xp")
+weapon_id = "03"
