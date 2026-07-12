@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bbjflpyr3k8w4"]
+
+[ext_resource type="Script" uid="uid://bd56y33p7ek50" path="res://scripts/interactables/ExitButton.gd" id="1_quuph"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_g4v7s"]
+top_radius = 0.9091797
+bottom_radius = 0.9091797
+height = 0.33822632
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_g4v7s"]
+height = 0.6542969
+radius = 1.0224609
+
+[node name="ExitButton" type="Area3D" unique_id=279483191]
+script = ExtResource("1_quuph")
+metadata/_custom_type_script = "uid://5r2f0xgodfxw"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=172050439]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22685242, 0)
+mesh = SubResource("CylinderMesh_g4v7s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=955753124]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.34031343, 0)
+shape = SubResource("CylinderShape3D_g4v7s")

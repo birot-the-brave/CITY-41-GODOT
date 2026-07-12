@@ -17,6 +17,7 @@ const MISSIONS: Dictionary = {
 			{"id": "lure", "label": "DISABLE the generator with your new gun to lure the GRUNTS outside.", "autosave": false},
 			{"id": "enter", "label": "ENTER the premises.", "autosave": false},
 			{"id": "clear", "label": "CLEAR out the GRUNTS using your new weapons, LMB or R3/RT to shoot, R or X/Square to reload.", "autosave": true},
+			{"id": "button", "label": "OPEN the exit.", "autosave": false},
 			{"id": "exit", "label": "LEAVE the premises.", "autosave": true},
 		]
 	},

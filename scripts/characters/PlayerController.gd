@@ -9,6 +9,7 @@ const MELEE_COOLDOWN := 0.5
 const MOUSE_SENSITIVITY := 0.003
 const PITCH_MIN := deg_to_rad(-89.0)
 const PITCH_MAX := deg_to_rad(89.0)
+const INTERACT_RANGE := 3.0
 
 @onready var camera_pivot: Node3D = $Head
 
@@ -35,20 +36,41 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Pause") and not get_tree().paused:
 		GameEvents.pause_requested.emit()
 		get_viewport().set_input_as_handled()
-
+	
 	if event.is_action_pressed("WeaponWheel"):
 		_open_weapon_wheel()
+	
 	if event.is_action_released("WeaponWheel"):
 		_close_weapon_wheel()
-
+	
+	if OS.is_debug_build() and event.is_action_pressed("DebugUnlockAll"):
+		_debug_unlock_all_weapons()
+	
+	if event.is_action_pressed("Interact"):
+		_try_interact()
+	
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		rotate_y(-event.relative.x * MOUSE_SENSITIVITY)
 		camera_pivot.rotate_x(-event.relative.y * MOUSE_SENSITIVITY)
 		camera_pivot.rotation.x = clamp(camera_pivot.rotation.x, PITCH_MIN, PITCH_MAX)
-
 	# Melee attack (F key or right stick click)
 	if Input.is_action_just_pressed("Melee") and melee_cooldown_timer <= 0.0:
 		_perform_melee_attack()
+
+func _try_interact() -> void:
+	var camera: Camera3D = get_viewport().get_camera_3d()
+	if not camera:
+		return
+
+	var from: Vector3 = camera.global_position
+	var to: Vector3 = from + camera.global_transform.basis.z * -INTERACT_RANGE
+
+	var query := PhysicsRayQueryParameters3D.create(from, to)
+	query.collide_with_areas = true
+	var result: Dictionary = get_world_3d().direct_space_state.intersect_ray(query)
+
+	if result.has("collider") and result["collider"] is Interactable:
+		result["collider"].interact()
 
 func _open_weapon_wheel() -> void:
 	if PlayerData.weapons["wheel_order"].is_empty():
@@ -105,7 +127,6 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-		PlayerData.health = clamp(PlayerData.health - 5, 0, 100)
 		if MissionManager.is_mission_active(00):
 			MissionManager.complete_objective(00, "jump")
 

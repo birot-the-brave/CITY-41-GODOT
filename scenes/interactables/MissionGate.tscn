@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cs1w6s4pvo3kk"]
+
+[ext_resource type="Script" uid="uid://db0akqr0rs1xc" path="res://scripts/interactables/MissionGate.gd" id="1_mqe7i"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_mqe7i"]
+size = Vector3(7.3830566, 4.4627686, 0.16381836)
+
+[node name="MissionGate" type="StaticBody3D" unique_id=1866947836]
+script = ExtResource("1_mqe7i")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=674068555]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1582299560]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.23392, 0)
+mesh = SubResource("BoxMesh_mqe7i")

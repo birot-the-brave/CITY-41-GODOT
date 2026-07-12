@@ -38,5 +38,7 @@ func _on_body_entered(body: Node3D) -> void:
 
 	if id == "power_punch" and MissionManager.is_mission_active(00):
 		MissionManager.complete_objective(00, "collect_1")
+	if id == "handgun" and MissionManager.is_mission_active(00):
+		MissionManager.complete_objective(00, "collect_2")
 
 	queue_free()
