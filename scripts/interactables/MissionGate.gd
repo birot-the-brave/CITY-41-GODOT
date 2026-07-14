@@ -3,9 +3,7 @@ class_name MissionGate
 
 @export var mission_id: int = -1
 @export var required_objective_id: String = ""
-@export var collision_shape_path: NodePath
-
-@onready var collision_shape: CollisionShape3D = get_node(collision_shape_path) if collision_shape_path else null
+@export var navigation_region: NavigationRegion3D
 
 func _ready() -> void:
 	if required_objective_id == "":
@@ -23,6 +21,6 @@ func _on_objective_completed(id: int, objective: String) -> void:
 		_unlock()
 
 func _unlock() -> void:
-	if collision_shape:
-		collision_shape.disabled = true
-	visible = false
+	if navigation_region:
+		GameEvents.nav_rebake_requested.emit(navigation_region)
+	queue_free()

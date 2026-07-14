@@ -1,4 +1,5 @@
-extends "res://scripts/weapons/ProjectileGunBase.gd"
+extends "res://scripts/classes/ProjectileGunBase.gd"
+
 
 
 # Called when the node enters the scene tree for the first time.

@@ -2,6 +2,7 @@ extends Area3D
 @export var id: String = ""
 @export var required_mission_id: int = -1
 @export var required_objective_id: String = ""
+@export var navigation_region: NavigationRegion3D
 
 func _ready() -> void:
 	if required_objective_id != "":
@@ -32,9 +33,11 @@ func _on_body_entered(body: Node3D) -> void:
 		return
 	if PlayerData.owns_weapon(id):
 		return
-
+	
 	PlayerData.unlock_weapon(id)
 	print("Weapon collected: ", id)
+	if navigation_region:
+		GameEvents.nav_rebake_requested.emit(navigation_region)
 
 	if id == "power_punch" and MissionManager.is_mission_active(00):
 		MissionManager.complete_objective(00, "collect_1")

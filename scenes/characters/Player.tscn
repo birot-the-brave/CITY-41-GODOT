@@ -17,6 +17,10 @@ script = ExtResource("1_hhusb")
 weapon_wheel = NodePath("WeaponWheel")
 weapon_manager = NodePath("WeaponManager")
 
+[node name="CeilingCheck" type="RayCast3D" parent="." unique_id=1513612810]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7981417, 0)
+target_position = Vector3(0, 0.3, 0)
+
 [node name="WeaponManager" type="Node3D" parent="." unique_id=704154154 node_paths=PackedStringArray("weapon_holder")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 script = ExtResource("2_x8bas")

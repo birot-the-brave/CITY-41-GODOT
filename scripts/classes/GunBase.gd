@@ -31,12 +31,12 @@ func _fire() -> void:
 	if magazine <= 0:
 		_reload()
 		return
-
 	can_fire = false
 	magazine -= 1
-
 	_perform_shot()
 	save_state()
+
+	GameEvents.noise_emitted.emit(global_position, stats.get("noise_radius", 15.0))
 
 	await get_tree().create_timer(fire_rate).timeout
 	can_fire = true

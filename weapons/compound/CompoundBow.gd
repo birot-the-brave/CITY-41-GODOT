@@ -1,4 +1,4 @@
-extends "res://scripts/weapons/ProjectileGunBase.gd"
+extends "res://scripts/classes/ProjectileGunBase.gd"
 
 
 

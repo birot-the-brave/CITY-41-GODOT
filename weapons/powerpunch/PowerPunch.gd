@@ -1,4 +1,4 @@
-extends "res://scripts/weapons/GunBase.gd"
+extends "res://scripts/classes/GunBase.gd"
 
 @export var punch_range: float = 2.0
 

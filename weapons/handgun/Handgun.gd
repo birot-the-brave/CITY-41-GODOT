@@ -1,4 +1,4 @@
-extends "res://scripts/weapons/GunBase.gd"
+extends "res://scripts/classes/GunBase.gd"
 
 func _ready() -> void:
 	fire_rate = 0.25

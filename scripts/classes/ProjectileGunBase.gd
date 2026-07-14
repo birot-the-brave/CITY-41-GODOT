@@ -1,4 +1,4 @@
-extends "res://scripts/weapons/GunBase.gd"
+extends "res://scripts/classes/GunBase.gd"
 class_name ProjectileGunBase
 
 @export var projectile_scene: PackedScene

@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://db0akqr0rs1xc" path="res://scripts/interactables/MissionGate.gd" id="1_mqe7i"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_abf5c"]
+size = Vector3(7.4, 4.4, 0.2)
+
 [sub_resource type="BoxMesh" id="BoxMesh_mqe7i"]
 size = Vector3(7.3830566, 4.4627686, 0.16381836)
 
@@ -9,6 +12,8 @@ size = Vector3(7.3830566, 4.4627686, 0.16381836)
 script = ExtResource("1_mqe7i")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=674068555]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, 0)
+shape = SubResource("BoxShape3D_abf5c")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1582299560]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.23392, 0)
